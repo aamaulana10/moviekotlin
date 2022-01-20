@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="160dp"
+    android:layout_height="220dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    tools:background="@color/dark_grey">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/movie_latest_image"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:scaleType="matrix"
+        app:shapeAppearanceOverlay="@style/roundedCornersImageView"
+        />
+
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:scaleType="fitXY"
+        android:layout_marginBottom="@dimen/margin"
+        android:src="@drawable/ic_outline_play_circle_outline_24" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/rounded_edge"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/btnInfo"
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="32dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_outline_info_24" />
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_baseline_more_vert_24" />
+
+    </LinearLayout>
+
+
+</FrameLayout>
