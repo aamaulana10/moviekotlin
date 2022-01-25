@@ -1,15 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
     tools:context=".core.feature.detail.DetailActivity">
 
-    <TextView
-        android:id="@+id/tvDetailTitle"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:text="Movie Title"
-        />
+        android:layout_height="match_parent">
 
-</RelativeLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <VideoView
+                    android:id="@+id/videoPreview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="300dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginStart="0dp" />
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="Preview"
+                    android:textStyle="bold"
+                    android:layout_gravity="bottom"
+                    android:layout_margin="@dimen/margin"
+                    />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tvDetailTitle"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Movie Title"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_margin="@dimen/margin"
+                />
+
+            <TextView
+                android:id="@+id/tvDetailDesc"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Movie Desc"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:layout_margin="@dimen/margin"
+                />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

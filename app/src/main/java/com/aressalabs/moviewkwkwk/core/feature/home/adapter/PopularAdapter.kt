@@ -6,12 +6,23 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.aressalabs.moviewkwkwk.R
 import com.aressalabs.moviewkwkwk.core.domain.model.MovieModel
-import com.aressalabs.moviewkwkwk.core.feature.home.`interface`.IMovieRecyclerListener
+import com.aressalabs.moviewkwkwk.core.feature.home.interfaces.IMovieRecyclerListener
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.movie_latest_item.view.*
+import java.util.ArrayList
 
-class PopularAdapter(private val movies: List<MovieModel>, private val listener: IMovieRecyclerListener)
+class PopularAdapter
     : RecyclerView.Adapter<PopularAdapter.MovieViewHolder>() {
+
+    private var movies = ArrayList<MovieModel>()
+    lateinit var listener: IMovieRecyclerListener
+
+    fun setData(newListData: List<MovieModel>?) {
+        if (newListData == null) return
+        movies.clear()
+        movies.addAll(newListData)
+        notifyDataSetChanged()
+    }
 
     inner class MovieViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
@@ -29,6 +40,12 @@ class PopularAdapter(private val movies: List<MovieModel>, private val listener:
             itemView.btnInfo.setOnClickListener {
                 listener.onInfoClicked(it, movie)
             }
+
+            itemView.btnBottomMenu.setOnClickListener {
+                listener.onMenuItemClicked(it, movie)
+            }
+
+            itemView.btnPlay.visibility = View.GONE
         }
 
     }

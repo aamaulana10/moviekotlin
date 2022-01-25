@@ -6,6 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingLeft="8dp"
     android:paddingRight="8dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:background="@color/dark_grey">
 
     <com.google.android.material.imageview.ShapeableImageView
@@ -18,6 +19,7 @@
 
 
     <ImageButton
+        android:id="@+id/btnPlay"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
@@ -42,6 +44,7 @@
             android:src="@drawable/ic_outline_info_24" />
 
         <ImageButton
+            android:id="@+id/btnBottomMenu"
             android:layout_width="30dp"
             android:layout_height="match_parent"
             android:background="@android:color/transparent"

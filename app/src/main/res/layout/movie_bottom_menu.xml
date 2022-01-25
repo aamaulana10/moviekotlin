@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/margin"
+    android:background="@color/dark_grey"
+    >
+
+    <TextView
+        android:id="@+id/titleBottomMenu"
+        android:text="Kimetsu No Yaiba"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:drawableLeft="@drawable/ic_outline_info_24"
+        android:text="Episodes &amp; Info"
+        android:textColor="@color/white"
+        android:backgroundTint="@android:color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"/>
+
+    <Button
+        android:drawableLeft="@drawable/ic_baseline_cloud_download_24"
+        android:text="Download Episode"
+        android:textColor="@color/white"
+        android:backgroundTint="@android:color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"/>
+
+    <Button
+        android:drawableLeft="@drawable/ic_like"
+        android:text="Like"
+        android:textColor="@color/white"
+        android:backgroundTint="@android:color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"/>
+
+    <Button
+        android:drawableLeft="@drawable/ic_dislike"
+        android:text="Not For Me"
+        android:textColor="@color/white"
+        android:backgroundTint="@android:color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"/>
+
+
+</LinearLayout>
